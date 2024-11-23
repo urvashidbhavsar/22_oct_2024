@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* pseudo classes are start with : sign */
+        .link1:link {
+            color: crimson;
+        }
+
+        .link2:any-link {
+            color: green;
+        }
+
+        /* default red, when we click it become active */
+        /* link or button or div */
+        .link3:active {
+            color: black;
+        }
+
+        .link4:visited {
+            color: chartreuse;
+        }
+
+        /* apply on any element */
+        .link5:hover {
+            color: orange;
+        }
+
+        button {
+            padding: 10px 30px;
+            background-color: darkcyan;
+            color: white;
+            border: 2px solid darkcyan;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background-color: white;
+            color: darkcyan;
+        }
+
+        :focus-visible {
+            outline: none;
+        }
+
+        input {
+            border: 1px solid gray;
+        }
+
+        :focus {
+            box-shadow: 0 0 10px 2px lawngreen;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" class="link1">Click 1</a><br><br>
+    <a href="#" class="link2">Click 2</a><br><br>
+    <a href="#" class="link3">Click 3</a><br><br>
+    <a href="#" class="link4">Click 4</a><br><br>
+    <a href="#" class="link5">Click 5</a><br><br>
+
+    <button>Click Here to download</button>
+
+    <input type="text">
+</body>
+
+</html>

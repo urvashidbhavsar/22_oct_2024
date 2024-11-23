@@ -1,0 +1,16 @@
+position means how to set element on webpage.
+
+5 values  :
+ 1. static (default) 
+ 2. relative
+ 3. absolute
+ 4. fixed
+ 5. sticky
+
+ list of property while effected when we apply position fixed, sticky, relative and absolute.
+
+ 1. top
+ 2. bottom
+ 3. left
+ 4. right
+ 5. z-index
