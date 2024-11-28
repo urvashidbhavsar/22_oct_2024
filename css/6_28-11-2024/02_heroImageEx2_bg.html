@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            ;
+        }
+
+        .hero-image {
+            background: url(https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?cs=srgb&dl=pexels-veeterzy-39811.jpg&fm=jpg) center / cover;
+            padding: 190px 0;
+            position: relative;
+            z-index: 1;
+            /* for apply single color on background image  */
+            /* background-blend-mode: multiply; */
+            /* filter: brightness(0.5); */
+        }
+
+        .hero-image::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(18, 36, 154, 0.6), rgba(181, 80, 12, 0.6));
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: 45px;
+            width: 36%;
+            text-align: center;
+            color: white;
+            margin: auto;
+        }
+
+        p {
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .btns {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 30px;
+            font-size: 17px;
+            border: 2px solid transparent;
+            border-radius: 23px;
+            color: white;
+            margin: 5px;
+        }
+
+        .btn1 {
+            background: transparent;
+            border-color: white;
+        }
+
+        .btn2 {
+            background-color: teal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>With Great Desgin Comes Great Response</h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </p>
+            <div class="btns">
+                <button class="btn1">Learn More</button>
+                <button class="btn2">Visit Here</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
