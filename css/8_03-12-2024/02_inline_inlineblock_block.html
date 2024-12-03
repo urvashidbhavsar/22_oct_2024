@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            /* list-style: none; */
+            list-style-type: none;
+            /* list-style-position: inside; */
+            /* list-style-image: url(); */
+        }
+
+        .list1 {
+            background-color: rgb(187, 115, 27);
+        }
+
+        .list1 li {
+            /* it set element in a row. but not calculate height and width */
+            display: inline;
+            background-color: violet;
+            padding: 10px;
+            height: 50px;
+            width: 50px;
+        }
+
+        .list2 {
+            background-color: rgb(187, 115, 27);
+        }
+
+        .list2 li {
+            /* it set elements in a row also calculate element height and width */
+            display: inline-block;
+            background-color: violet;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="list1">
+        <li>List 1</li>
+        <li>List 2</li>
+        <li>List 3</li>
+    </ul>
+    <br><br>
+
+    <ul class="list2">
+        <li>List 1</li>
+        <li>List 2</li>
+        <li>List 3</li>
+    </ul>
+</body>
+
+</html>

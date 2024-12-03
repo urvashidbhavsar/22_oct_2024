@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .child {
+            width: 33.3333%;
+            height: 100px;
+        }
+
+        .child:nth-child(1) {
+            background-color: aquamarine;
+        }
+
+        .child:nth-child(2) {
+            background-color: rebeccapurple;
+        }
+
+        .child:nth-child(3) {
+            background-color: mediumpurple;
+        }
+
+        .child:nth-child(4) {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- flex means set flexible elements in a row -->
+    <!-- create structure as parent - child -->
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+</body>
+
+</html>
