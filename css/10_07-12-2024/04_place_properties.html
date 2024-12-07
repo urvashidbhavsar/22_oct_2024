@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv {
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+
+            display: grid;
+            /* short hand of align-content and justify-content */
+            /* place-content: center start;  */
+
+            /* short hand of align-items and justify-items */
+            /* place-items: center end; */
+        }
+
+        span {
+            /* short hand of align-self and justify-self */
+            place-self: end end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mydiv">
+        <span>💥</span>
+    </div>
+</body>
+
+</html>
