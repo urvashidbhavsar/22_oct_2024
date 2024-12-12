@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 99vh;
+            display: grid;
+            place-content: center;
+        }
+
+        .setup {
+            height: 200px;
+            width: 200px;
+            position: relative;
+        }
+
+        .cubeBox {
+            height: 200px;
+            width: 200px;
+            transform: translateZ(-100px);
+            perspective: 400px;
+            transform-style: preserve-3d;
+            perspective-origin: 75% -166%;
+        }
+
+        .cube {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            font-size: 35px;
+            display: grid;
+            place-content: center;
+        }
+
+        .front {
+            background-color: rgba(102, 51, 153, 0.7);
+            transform: rotate(0deg) translateZ(100px);
+        }
+
+        .back {
+            background-color: rgba(153, 82, 51, 0.7);
+            transform: rotate(0deg) translateZ(-100px);
+        }
+
+        .top {
+            background-color: rgba(51, 153, 75, 0.7);
+            transform: rotateX(-90deg) translateZ(-100px);
+        }
+
+        .bottom {
+            background-color: rgba(39, 1, 17, 0.7);
+            transform: rotateX(90deg) translateZ(-100px);
+        }
+
+        .left {
+            background-color: rgba(3, 67, 34, 0.7);
+            transform: rotateY(90deg) translateZ(-100px);
+        }
+
+        .right {
+            background-color: rgba(201, 16, 170, 0.7);
+            transform: rotateY(-90deg) translateZ(-100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="setup">
+        <div class="cubeBox">
+            <div class="cube front">Front</div>
+            <div class="cube back">Back</div>
+            <div class="cube top">Top</div>
+            <div class="cube bottom">Bottom</div>
+            <div class="cube left">Left</div>
+            <div class="cube right">Right</div>
+        </div>
+    </div>
+</body>
+
+</html>
