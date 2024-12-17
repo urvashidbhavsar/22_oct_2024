@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 99vh;
+            display: grid;
+            place-content: center;
+        }
+
+        .setup {
+            height: 200px;
+            width: 200px;
+            position: relative;
+        }
+
+        .circle {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .circle1 {
+            background-color: green;
+            /* left: 50px; */
+            animation: circle1 1s linear infinite alternate;
+        }
+
+        .circle2 {
+            background-color: darkcyan;
+            left: 100px;
+            animation: circle2 1s linear infinite alternate;
+        }
+
+        .circle3 {
+            background-color: tomato;
+            left: 0px;
+            top: 100px;
+            animation: circle3 1s linear infinite alternate;
+        }
+
+        .circle4 {
+            background-color: mediumaquamarine;
+            left: 100px;
+            top: 100px;
+            animation: circle4 1s linear infinite alternate;
+        }
+
+        @keyframes circle1 {
+            0% {
+                transform: translate(0);
+            }
+
+            50% {
+                transform: translate(0, 100px);
+            }
+
+            100% {
+                transform: translate(100px, 0px);
+            }
+        }
+
+        @keyframes circle2 {
+            0% {
+                transform: translate(0);
+            }
+
+            50% {
+                transform: translate(0, 100px);
+            }
+
+            100% {
+                transform: translate(-100px, 0);
+            }
+        }
+
+        @keyframes circle3 {
+            0% {
+                transform: translate(0);
+            }
+
+            50% {
+                transform: translate(0, -100px);
+            }
+
+            100% {
+                transform: translate(100px, 0);
+            }
+        }
+
+        @keyframes circle4 {
+            0% {
+                transform: translate(0);
+            }
+
+            50% {
+                transform: translate(0, -100px);
+            }
+
+            100% {
+                transform: translate(-100px, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="setup">
+        <div class="circle1 circle"></div>
+        <div class="circle2 circle"></div>
+        <div class="circle3 circle"></div>
+        <div class="circle4 circle"></div>
+    </div>
+</body>
+
+</html>
