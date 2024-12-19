@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background-color: bisque;
+        }
+
+        #para {
+            /* priority - 1 */
+            color: green;
+        }
+
+        p {
+            /* priority - 3 */
+            color: blue !important;
+        }
+
+        .mypara {
+            /* priority - 2 */
+            color: red;
+        }
+
+        tr {
+            background-color: gold !important;
+        }
+
+        td {}
+    </style>
+</head>
+
+
+<body>
+    <p class="mypara" id="para">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae numquam quo assumenda optio, expedita
+        ipsam, tempore sit facilis molestias recusandae, dolores minima aliquam fugit quis. Beatae quas inventore
+        explicabo consequuntur?
+    </p>
+
+    <table border="1">
+        <tr>
+            <td>col1</td>
+            <td>col2</td>
+        </tr>
+        <tr>
+            <td>col1</td>
+            <td>col2</td>
+        </tr>
+    </table>
+</body>
+
+</html>
