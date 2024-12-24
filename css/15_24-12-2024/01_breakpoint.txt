@@ -1,0 +1,17 @@
+6 responsive breakpoints 
+
+576px
+768px
+992px
+1200px
+1400px
+
+use rule 
+@media screen {}
+
+max-width 576px   mobile screen 
+min-width 576px   mobile screen = landscape mode
+min-width 768px   tablet screen 
+min-width 992px   mini leptop 
+min-width 1200px  normal screen large screen 
+min-width 1400px  extra large 
