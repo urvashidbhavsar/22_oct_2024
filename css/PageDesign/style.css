@@ -35,9 +35,18 @@ ul {
     --b1: 1px;
     --b2: 2px;
     --b3: 3px;
-    --fs-1: calc(2.5vw+1.2rem);
-    --fs-2: calc(2vw+1rem);
-    --fs-3: calc(1.5vw+1rem);
+    --fs-1: calc(2.5vw + 1.2rem);
+    --fs-2: calc(2vw + 1rem);
+    --fs-3: calc(1.5vw + 1rem);
+}
+
+:focus-visible {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    transition: 0.4s ease;
 }
 
 /* =====================================================================   */
@@ -48,10 +57,173 @@ ul {
 /* ==================================================================== */
 .main-layout .sidebar {
     width: 25%;
+    position: fixed;
     padding: var(--space-4);
+    background: linear-gradient(to top, var(--orange), var(--pink));
+    overflow-x: hidden;
+    scrollbar-width: none;
+    height: 105vh;
+}
+
+.main-layout .sidebar .input-field {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.main-layout .sidebar .input-field form {
+    display: flex;
+}
+
+.main-layout .sidebar .input-field form input {
+    height: 40px;
+    width: 100%;
+    border-radius: 40px 0 0 40px;
+    border: none;
+    padding: 4px var(--space-1);
+    font-size: 16px;
+}
+
+.main-layout .sidebar .input-field form button {
+    border-radius: 0 40px 40px 0;
+    width: 30px;
+    border: none;
+    background-color: var(--white);
+}
+
+.main-layout .sidebar .input-field .theme i {
+    font-size: 24px;
+    vertical-align: middle;
+    color: var(--white);
+}
+
+.main-layout .sidebar .logo {
+    padding: 15px 0;
+    text-align: center;
+}
+
+.main-layout .sidebar .logo h1 {
+    /* font-size: var(--fs-1); */
+    font-size: 30px;
+}
+
+.main-layout .sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-1) 0;
+}
+
+.main-layout .sidebar ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.225);
+    padding-bottom: var(--space-2);
+}
+
+.main-layout .sidebar a {
+    color: var(--white);
+}
+
+.main-layout .sidebar .contact {
+    padding: var(--space-1) 0;
+}
+
+.main-layout .sidebar .contact .time {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: var(--white);
+    padding: var(--space-1) 0;
+}
+
+.main-layout .sidebar .contact .time i {
+    font-size: 23px;
+}
+
+.main-layout .sidebar .social {
+    padding-top: var(--space-5);
+    display: flex;
+    justify-content: center;
+    gap: var(--space-1);
+}
+
+.main-layout .sidebar .social .icon {
+    height: 40px;
+    width: 40px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    color: var(--white);
 }
 
 /* ==================================================================== */
-.main-layout .main-page {
+/* .main-layout .main-page {
     width: 75%;
+    margin-left: 25%;
+} */
+
+.main-page .homepage {
+    background: url(https://images.pexels.com/photos/705255/pexels-photo-705255.jpeg) no-repeat center / cover;
+    /* padding: 320px 0 30px 30px; */
+}
+
+.main-page .homepage .homecontent {
+    background-color: var(--white);
+    /* width: 550px; */
+    padding: var(--space-3);
+}
+
+.main-page .homepage .homecontent h1 {
+    font-size: var(--fs-3);
+}
+
+.main-page .homepage .homecontent button {
+    padding: var(--space-1) var(--space-3);
+    background-color: var(--pink);
+    border-radius: 40px;
+    font-size: 15px;
+    color: var(--white);
+    border: none;
+    margin-top: var(--space-2);
+}
+
+.main-page .homepage .homecontent button:hover {
+    background-color: var(--orange);
+}
+
+.main-page .homepage .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--space-2) var(--space-4);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-page .homepage .navbar .logo {
+    font-size: calc(1.5vw + 1rem);
+}
+
+.main-page .homepage .navbar .logo a {
+    color: var(--white);
+}
+
+.main-page .homepage .navbar .icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    color: var(--white);
+}
+
+.main-page .homepage .navbar .icons button {
+    height: 40px;
+    width: 40px;
+    background: linear-gradient(var(--orange), var(--pink));
+    border: none;
+    border-radius: 4px;
+    color: var(--white)
 }

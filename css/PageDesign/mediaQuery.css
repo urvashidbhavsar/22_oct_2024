@@ -1,0 +1,81 @@
+/* ========================= max 576px ======================== */
+@media (max-width:576px) {
+    .main-layout .sidebar {
+        display: none;
+    }
+
+    .main-layout .main-page {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .main-page .homepage {
+        padding: 150px 20px 20px 20px;
+    }
+
+    .main-page .homepage .homecontent {
+        width: 100%;
+    }
+
+    .main-page .homepage .nav {
+        display: block;
+    }
+}
+
+/* ========================= min 576px ======================== */
+@media (min-width:576px) {
+    .main-layout .sidebar {
+        display: none;
+    }
+
+    .main-layout .main-page {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .main-page .homepage {
+        padding: 150px 20px 20px 20px;
+    }
+
+    .main-page .homepage .homecontent {
+        width: 70%;
+    }
+
+    .main-page .homepage .nav {
+        display: block;
+    }
+}
+
+/* ========================= min 768px ======================== */
+@media (min-width:768px) {
+    .main-page .homepage {
+        padding: 320px 0 30px 30px;
+    }
+
+    .main-page .homepage .homecontent {
+        width: 70%;
+    }
+}
+
+/* ========================= min 992px ======================== */
+@media (min-width:992px) {
+    .main-layout .sidebar {
+        display: block;
+    }
+
+    .main-layout .main-page {
+        width: 75%;
+        margin-left: 25%;
+    }
+
+    .main-page .homepage .homecontent {
+        width: 550px;
+    }
+
+    .main-page .homepage .nav {
+        display: none;
+    }
+}
+
+/* ========================= min 1200px ======================== */
+/* ========================= min 1400px ======================== */
