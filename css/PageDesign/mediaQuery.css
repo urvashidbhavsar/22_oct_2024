@@ -20,6 +20,14 @@
     .main-page .homepage .nav {
         display: block;
     }
+
+    .services .serviceBox .ImageBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .clientsec .ClientBox .box {
+        width: 100%;
+    }
 }
 
 /* ========================= min 576px ======================== */
@@ -43,6 +51,14 @@
 
     .main-page .homepage .nav {
         display: block;
+    }
+
+    .services .serviceBox .ImageBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .clientsec .ClientBox .box {
+        width: 45%;
     }
 }
 
@@ -78,4 +94,14 @@
 }
 
 /* ========================= min 1200px ======================== */
+@media (min-width:1200px) {
+    .services .serviceBox .ImageBox {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .clientsec .ClientBox .box {
+        width: 30%;
+    }
+}
+
 /* ========================= min 1400px ======================== */

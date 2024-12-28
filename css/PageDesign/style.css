@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -14,6 +15,11 @@ a {
 
 ul {
     list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
 }
 
 :root {
@@ -47,6 +53,16 @@ ul {
 button {
     cursor: pointer;
     transition: 0.4s ease;
+}
+
+.title h1 {
+    font-size: var(--fs-3);
+    border-left: 3px solid var(--pink);
+    padding-left: var(--space-1);
+}
+
+.title p {
+    font-style: italic;
 }
 
 /* =====================================================================   */
@@ -226,4 +242,111 @@ button {
     border: none;
     border-radius: 4px;
     color: var(--white)
+}
+
+/* =============================  */
+.services .serviceBox {
+    padding: var(--space-5) var(--space-3);
+}
+
+.services .serviceBox .ImageBox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+}
+
+.services .serviceBox .box {
+    position: relative;
+    overflow: hidden;
+}
+
+.services .serviceBox .overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.5s ease;
+    display: grid;
+    place-content: end start;
+    padding: 20px;
+    color: white;
+}
+
+.services .serviceBox .overlay h1 {
+    text-shadow: 0 0 5px var(--black);
+    transform: translateY(30px);
+    transition: 0.5s ease;
+}
+
+.services .serviceBox .overlay button {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: var(--space-1);
+    border: none;
+    border-radius: 10px;
+    transform: translateY(60px);
+    transition: 0.5s ease;
+}
+
+.services .serviceBox .box:hover .overlay {
+    background-color: unset;
+}
+
+.services .serviceBox .box:hover h1 {
+    transform: translateY(0);
+}
+
+.services .serviceBox .box:hover button {
+    transform: translateY(0);
+}
+
+/* ======================== */
+.clientsec {
+    background: url(https://thumbs.dreamstime.com/b/vase-fall-flowers-wooden-table-cozy-home-adding-warmth-color-to-rooms-decor-touch-autumn-beauty-floral-326661857.jpg) no-repeat center/cover;
+    background-attachment: fixed;
+}
+
+.clientsec .client-space {
+    padding: var(--space-5) var(--space-3);
+}
+
+.clientsec .ClientBox {
+    margin-top: var(--space-4);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.clientsec .ClientBox .box {
+    background-color: var(--white);
+    padding: var(--space-3);
+    /* width: 30%; */
+}
+
+/* .clientsec .ClientBox .box q::before {
+    font-size: 50px;
+    color: var(--orange);
+} */
+.clientsec .ClientBox .box p {
+    text-align: justify;
+}
+
+.clientsec .ClientBox .box i {
+    font-size: 30px;
+    transform: translateY(-6px);
+    color: orange;
+}
+
+.clientsec .ClientBox .clientimage {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: var(--space-2) 0;
+}
+
+.clientsec .ClientBox .clientimage img {
+    border-radius: 50%;
 }
