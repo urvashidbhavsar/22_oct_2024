@@ -65,6 +65,11 @@ button {
     font-style: italic;
 }
 
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
 /* =====================================================================   */
 .main-layout {
     display: flex;
@@ -74,7 +79,7 @@ button {
 .main-layout .sidebar {
     width: 25%;
     position: fixed;
-    padding: var(--space-4);
+    padding: var(--space-9) var(--space-4);
     background: linear-gradient(to top, var(--orange), var(--pink));
     overflow-x: hidden;
     scrollbar-width: none;
@@ -349,4 +354,50 @@ button {
 
 .clientsec .ClientBox .clientimage img {
     border-radius: 50%;
+}
+
+.header {
+    background-color: var(--orange);
+    position: fixed;
+    width: 100%;
+    z-index: 111;
+    overflow: auto;
+    scrollbar-width: thin;
+    /* scroll-behavior: smooth; */
+    /* scrollbar-gutter: stable; */
+    /* scrollbar-color: rgb(177, 119, 10) var(--orange); */
+}
+
+.header::-webkit-scrollbar {
+    width: 20px;
+}
+
+.header::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+.header::-webkit-scrollbar-thumb {
+    background: var(--orange);
+    border-radius: 10px;
+}
+
+.header::-webkit-scrollbar-thumb:hover {
+    background: rgb(2, 7, 26);
+}
+
+.header ul {
+    padding: var(--space-2) 0;
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    /* gap: 20px; */
+}
+
+.header ul li {
+    padding: 10px;
+}
+
+.header ul a {
+    color: var(--black);
 }
