@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        .loginpage {
+            width: 500px;
+        }
+
+        body {
+            height: 100vh;
+            display: grid;
+            place-content: center;
+            background: linear-gradient(60deg, #1f89db, #f0db51);
+        }
+
+        input {
+            border: none !important;
+            border-bottom: 2px solid black !important;
+            border-radius: 0 !important;
+            background-color: transparent !important;
+        }
+
+        input:focus {
+            box-shadow: none !important;
+        }
+
+        .form-floating>.form-control-plaintext~label::after,
+        .form-floating>.form-control:focus~label::after,
+        .form-floating>.form-control:not(:placeholder-shown)~label::after,
+        .form-floating>.form-select~label::after {
+            background-color: transparent !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form class="loginpage p-5 shadow-lg">
+            <h2 class="border-start border-5 border-danger ps-3 mb-3">Login</h2>
+            <div class="row g-3">
+                <div class="col-12">
+                    <div class="form-floating">
+                        <input type="email" class="form-control text-white" id="email" placeholder="">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating">
+                        <input type="password" class="form-control text-white" id="pass" placeholder="Password">
+                        <label for="pass">Password</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-outline-light w-100">Login</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
