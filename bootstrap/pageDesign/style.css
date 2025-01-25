@@ -1,0 +1,24 @@
+.slider1 {
+    background: url(https://wp.w3layouts.com/excellence/wp-content/themes/excellence/assets/images/banner2.jpg) center/cover rgba(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
+}
+
+.slider2 {
+    background: url(https://wp.w3layouts.com/excellence/wp-content/themes/excellence/assets/images/banner1.jpg) center/cover rgba(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
+}
+
+.slider3 {
+    background: url(https://wp.w3layouts.com/excellence/wp-content/themes/excellence/assets/images/banner3.jpg) center/cover rgba(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
+}
+
+.slider {
+    padding: 150px 0;
+}
+
+@media (max-width:576px) {
+    .slider {
+        padding: 70px 0;
+    }
+}
