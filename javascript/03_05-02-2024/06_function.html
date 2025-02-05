@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <button onclick="myFunc()">Click</button> -->
+    <script>
+        // this function create without arguments/parameter
+        function myFunc() {
+            document.write("<p>Hello world</p>")
+        }
+        // call a function
+        myFunc();
+
+        // function with arguments/parameter
+        function myNewFunc(no, msg) {
+            document.write(`<p>${no} -> ${msg}</p>`)
+        }
+        myNewFunc(1, "Hello User")
+        myNewFunc(2, "Learn Js")
+        myNewFunc(3, "Learn TS")
+
+    </script>
+</body>
+
+</html>
