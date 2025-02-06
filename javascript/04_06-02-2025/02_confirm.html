@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="showconfirm()">Show Confirm</button>
+
+    <a href="" onclick="showyoutube()">Youtube</a>
+
+    <script>
+        function showconfirm() {
+            if (confirm("Click on any button")) {
+                alert("ok")
+            } else {
+                alert("cancel")
+            }
+        }
+
+        function showyoutube() {
+            if (confirm("Are you sure to open youtube")) {
+                window.open("https://www.youtube.com/", "_blank")
+            } else {
+                // alert("task canceled")
+                window.close()
+            }
+        }
+    </script>
+</body>
+
+</html>
