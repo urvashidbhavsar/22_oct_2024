@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#">
+        <label for="">Enter Name : </label>
+        <input type="text" name="" id="pname">
+
+        <br><br>
+        <button onclick="return checkValidate()">Click</button>
+    </form>
+
+    <p>Your name is :
+        <span id="msg1"></span>
+    </p>
+
+    <script>
+        function checkValidate() {
+            let per_name = document.getElementById("pname").value;
+
+            if (per_name === "") {
+                alert("Enter name")
+            } else {
+                document.getElementById("msg1").innerHTML = per_name
+                document.getElementById("pname").value = ""
+            }
+
+            return false
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #validate {
+            color: red;
+            font-size: 12px;
+            margin-left: 85px;
+        }
+
+        :focus-visible {
+            outline: none;
+        }
+
+        input {
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" onsubmit="return checkValidate()">
+        <label for="">Enter Name : </label>
+        <input type="text" name="" id="pname" minlength="3" maxlength="10">
+        <div id="validate"></div>
+
+        <br><br>
+        <!-- <button onclick="return checkValidate()">Click</button> -->
+        <button type="submit">Click</button>
+    </form>
+
+    <p>Your name is :
+        <span id="msg1"></span>
+    </p>
+
+    <script>
+        function checkValidate() {
+            let per_name = document.getElementById("pname");
+
+            if (per_name.value === "") {
+                // alert("Enter name")
+                document.getElementById("validate").innerHTML = "Enter name"
+                per_name.style.borderColor = "red"
+            } else {
+                document.getElementById("msg1").innerHTML = per_name.value
+                per_name.value = ""
+                document.getElementById("validate").innerHTML = ""
+                per_name.style.borderColor = "gray"
+            }
+
+            return false
+        }
+    </script>
+</body>
+
+</html>

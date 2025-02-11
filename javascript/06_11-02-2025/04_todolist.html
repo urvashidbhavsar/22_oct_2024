@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li::marker {
+            content: "➡";
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="todos">
+        <button onclick="todolist()">Add</button>
+    </div>
+
+    <ul id="list"></ul>
+
+    <script>
+        function todolist() {
+            let todo = document.getElementById("todos")
+            let ul = document.getElementById("list")
+            if (todo.value === "") {
+                alert("Enter value")
+            } else {
+                let list = document.createElement("li")
+                let list_text = document.createTextNode(todo.value)
+                list.appendChild(list_text)
+                ul.appendChild(list);
+                todo.value = ""
+            }
+        }
+    </script>
+</body>
+
+</html>
