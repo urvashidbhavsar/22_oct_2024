@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let dateObj = new Date();
+        let options = {
+            weekday: "long",
+            year: "numeric",
+            month: "short",
+            day: "numeric"
+        };
+        console.log(dateObj.toLocaleDateString("en-US"));
+        console.log(dateObj.toLocaleDateString("en-US", options));
+        console.log(dateObj.toLocaleTimeString("en-US"));
+
+        console.log(dateObj.toLocaleString("en-US", {
+            timeZone: "Europe/London"
+        }));
+        console.log(dateObj.toLocaleString("en-US", {
+            timeZone: "Africa/Johannesburg"
+        }));
+
+
+        // https://stackoverflow.com/questions/38399465/how-to-get-list-of-all-timezones-in-javascript
+    </script>
+</body>
+
+</html>

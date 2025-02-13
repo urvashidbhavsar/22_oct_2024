@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // create instance of Date() method
+        var dt = new Date()
+
+        document.write(`<p>Current datetime : ${dt}</p>`)
+
+        document.write(`<p>
+            ${dt.getDate()}-${dt.getMonth() + 1}-${dt.getFullYear()}
+            </p>`);
+
+        document.write(`<p>
+            ${dt.getHours()}:${dt.getMinutes()}:${dt.getSeconds()}
+            </p>`);
+
+        document.write(`<p>${dt.getDay()}</p>`)
+
+        document.write(`<p>${dt.toDateString()}</p>`)
+
+        document.write(`<p>${dt.toLocaleTimeString()}</p>`)
+
+    </script>
+</body>
+
+</html>
