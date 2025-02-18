@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #collection {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .set-img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="imgurl" placeholder="Enter Image URL">
+    <button onclick="addImages()">Add image</button>
+
+    <br><br>
+    <div id="collection"></div>
+    <script>
+        function addImages() {
+            let myimg = document.createElement("img")
+            let input = document.getElementById("imgurl")
+            let div = document.getElementById("collection")
+
+            myimg.setAttribute("src", input.value)
+            myimg.setAttribute("class", "set-img")
+            div.appendChild(myimg)
+            input.value = ""
+        }
+    </script>
+</body>
+
+</html>
