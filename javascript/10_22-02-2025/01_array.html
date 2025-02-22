@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let cars = ["BMW", "Audi", "Thar", "scoda", "Ford"]
+        console.log(cars);
+
+        // single value
+        console.log(cars[0]);
+
+        console.log("-- for loop --")
+        // using loop print an array
+        for (let i = 0; i < cars.length; i++) {
+            console.log((i + 1) + "➡" + cars[i]);
+        }
+
+        console.log("-- for of loop --")
+        // for (const car of cars) {
+        //     console.log(car);
+        // }
+        let indexing = cars.keys()
+        for (const i of indexing) {
+            console.log(i + "➡" + cars[i]);
+        }
+
+        // add array  at end
+        cars.push("Swift", "Maruti")
+        console.log("-- foreach loop --")
+        cars.forEach((car, i) => {
+            console.log(i + "  " + car);
+        });
+
+        // remove from end
+        cars.pop()
+        // remove from begin
+        cars.shift()
+        console.log("-- result --")
+        cars.forEach((car, i) => {
+            console.log(i + "  " + car);
+        });
+
+        // add array from begin
+        cars.unshift("SUV")
+
+        // a = [12, 54]
+        // b = a
+        // b[2] = 45
+        // console.log(b);
+        // console.log(a);
+
+    </script>
+</body>
+
+</html>
