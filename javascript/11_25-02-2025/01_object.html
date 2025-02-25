@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var person = {
+            firstname: "Abc",
+            age: 43,
+            gender: "Male",
+            dob: "23-02-1980",
+            phone: 9825658956
+        }
+        console.log(person)
+
+        console.log(person["age"])
+        console.log(person.age)
+
+        for (const per in person) {
+            if (Object.prototype.hasOwnProperty.call(person, per)) {
+                console.log(`${per} => ${person[per]}`);
+
+            }
+        }
+    </script>
+</body>
+
+</html>

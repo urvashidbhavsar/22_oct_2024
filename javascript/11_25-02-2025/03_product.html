@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .setimg {
+            height: 300px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row productdata"></div>
+    </div>
+
+
+    <script>
+        let mobiles = [
+            {
+                id: 1,
+                brand: "Samsung",
+                modal: "Samsung Galaxy S25 Ultra 5G AI Smartphone (Titanium Silverblue, 12GB RAM, 1TB Storage), 200MP Camera, S Pen Included, Long Battery Life",
+                price: 165999,
+                size: "12GB RAM + 1024GB Storage",
+                image: "https://m.media-amazon.com/images/I/71P85R392uL._AC_UY218_.jpg"
+            },
+            {
+                id: 2,
+                brand: "iQOO",
+                modal: "iQOO Z9x 5G (Tornado Green, 6GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge",
+                price: 13499,
+                size: "6GB RAM, 128GB Storage",
+                image: "https://m.media-amazon.com/images/I/61wHkeTOhWL._AC_UY218_.jpg"
+            },
+            {
+                id: 3,
+                brand: "Samsung",
+                modal: "Samsung Galaxy A05 (Light Green, 6GB, 128GB Storage) | 50 MP Main Camera | Upto 12GB RAM with RAM Plus | MediaTek Helio G85 | 5000 mAh Battery",
+                price: 7990,
+                size: "6GB + 128GB",
+                image: "https://m.media-amazon.com/images/I/81bQaAhgpFL._AC_UY218_.jpg"
+            }
+
+        ]
+
+        let data = document.querySelector(".productdata");
+        mobiles.forEach(items => {
+            data.innerHTML += `
+            <div class="col-4">
+                <div class="card">
+                    <img src=${items.image} class="setimg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">${items.brand}</h5>
+                        <p class="card-text">${items.modal}</p>
+                        <p><span class="h5">Size </span>${items.size}</p>
+                        <p>₹ ${items.price} </p>
+                    </div>
+                </div>
+            </div>
+           `
+        })
+
+    </script>
+</body>
+
+</html>
