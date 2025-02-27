@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Input only Number</label>
+    <input type="text" id="input1">
+    <button type="button" onclick="data()">Submit</button>
+    <script>
+
+        function data() {
+            let $input = document.querySelector("#input1");
+            // let str = "Aab123";
+
+            // create pattern use = // backslash
+            // for check pattern = [] use brackets
+            // for check whole value apply quntifiers
+            // if set modifiters use to outer //
+            // let ptn = /^[a-z]*$/i
+            let ptn = /^[a-z0-9]+@[a-z]+\.[a-z]{2,}$/
+            if (ptn.test($input.value)) {
+                document.write("Match")
+            } else {
+                document.write("not Match")
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
