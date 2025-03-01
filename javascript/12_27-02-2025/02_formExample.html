@@ -19,7 +19,11 @@
             <div class="row g-2">
                 <div class="col-12">
                     <input type="text" placeholder="Enter Name" name="" id="inpname" class="form-control"
-                        onkeyup="return checknameptn()" oninput="allows()">
+                        onkeyup="return checknameptn()" oninput="allows()" value="">
+                    <div id="err1" class="err my-1"></div>
+                </div>
+                <div class="col-12">
+                    <input type="text" placeholder="Enter Name" name="" id="" class="form-control">
                     <div id="err1" class="err my-1"></div>
                 </div>
                 <div class="col-12">
@@ -31,7 +35,7 @@
 
     <script>
         function checkname() {
-            let fname = document.getElementById("inpname")
+            let fname = document.getElementById("inpname");
             if (fname.value === "") {
                 document.getElementById("err1").innerHTML = "Enter name"
             }
@@ -54,8 +58,14 @@
         function allows() {
             let fname = document.getElementById("inpname")
             fname.value = fname.value.replace(/[\d\W]/, "")
-            
         }
+
+        let inpval = document.querySelectorAll("input");
+        inpval.forEach(ele => {
+            ele.addEventListener("input", () => {
+                ele.value = ele.value.toUpperCase()
+            })
+        })
     </script>
 </body>
 
