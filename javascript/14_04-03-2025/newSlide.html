@@ -20,12 +20,12 @@
 
         .sliders {
             position: relative;
-            height: 600px;
         }
 
         .slide {
             position: absolute;
             width: 100%;
+            display: none;
         }
 
         .slider-btn {
@@ -64,18 +64,18 @@
 
         .dots {
             position: absolute;
+            z-index: 111;
+            top: 550px;
             width: 100%;
             display: flex;
             justify-content: center;
-            bottom: 25px;
-            left: 0;
-            gap: 7px;
         }
 
         .dot {
             height: 15px;
             width: 15px;
-            background-color: #b7b7b7;
+            margin: 5px;
+            background-color: gray;
             border-radius: 50%;
             cursor: pointer;
         }
@@ -100,7 +100,7 @@
                 alt="">
         </div>
         <div class="slide">
-            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/d96bb958-4e6c-4ce0-9447-fbe226fbbecf/dh4kldk-b088ecb8-c7b4-41ce-a752-d84d36c03f80.jpg/v1/fill/w_1192,h_670,q_70,strp/kung_fu_panda_4_po___live_wallpaper_for_pc_by_favorisxp_dh4kldk-pre.jpg"
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/d96bb958-4e6c-4ce0-9447-fbe226fbbecf/dh4kldk-b088ecb8-c7b4-41ce-a752-d84d36c03f80.jpg"
                 alt="">
         </div>
         <div class="slide">
@@ -120,55 +120,53 @@
     </div>
 
     <script>
-        var index = 0
-        let slide = document.querySelectorAll(".slide")
-        let dotsdiv = document.querySelector(".dots")
+        let index = 0;
+        let slides = document.querySelectorAll(".slide");
+        const dotsContainer = document.querySelector(".dots");
 
-        slideshow(index)
+        slides.forEach((_, i) => {
+            const dot = document.createElement("span");
+            dot.classList.add("dot");
+            dot.setAttribute("onclick", `currentSlide(${i})`);
+            dotsContainer.appendChild(dot);
+        });
 
-        // code for dots
-        slide.forEach((_, i) => {
-            const dot = document.createElement("div")
-            dot.classList.add("dot")
-            dot.setAttribute("onclick", `currentSlide(${i})`)
-            dotsdiv.appendChild(dot)
-        })
-
-        // click perform
-        function change(x) {
-            slideshow(index += x)
-        }
-
-        // dot selection
         function currentSlide(n) {
             slideshow(index = n);
         }
 
-        setInterval(() => {
-            change(1)
-        }, 5000)
-
-        // logic
-        function slideshow(n) {
-            if (n == slide.length) {
-                n = 0
-                index = 0
-            }
-
-            if (n < 0) {
-                n = slide.length - 1
-                index = slide.length - 1;
-            }
-
-            slide.forEach((element, i) => {
-                element.style.display = "none"
-                document.querySelectorAll(".dot")[i]?.classList.remove("active");
-            });
-
-            slide[index].style.display = "block"
-            document.querySelectorAll(".dot")[index]?.classList.add("active")
+        function change(x) {
+            slideshow(index += x);
         }
+
+        function slideshow(n) {
+            if (n == slides.length) index = 0;
+            if (n < 0) index = slides.length - 1;
+
+            slides.forEach(slide => slide.style.display = "none");
+            document.querySelectorAll(".dot").forEach(dot =>
+                dot.classList.remove("active")
+            );
+
+            slides[index].style.display = "block";
+            document.querySelectorAll(".dot")[index].classList.add("active");
+        }
+
+        setInterval(() => change(1), 5000);
+        slideshow(index);
+
     </script>
+
+    <!-- sliders query libraries 
+   https://swiperjs.com/
+   
+   https://bxslider.com/
+
+   https://owlcarousel2.github.io/OwlCarousel2/
+
+   https://kenwheeler.github.io/slick/
+   -->
+
 </body>
 
 </html>
