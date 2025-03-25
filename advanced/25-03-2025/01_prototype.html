@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 2, 3, 4]
+        console.log(arr);
+
+        function student(fname, lname) {
+            this.fname = fname
+            this.lname = lname
+        }
+
+        student.prototype.fullname = function () {
+            // console.log(this.fname + " " + this.lname)
+            return this.fname + " " + this.lname
+        }
+
+        let s1 = new student("Abc", "Xyz")
+        // s1.fullname()
+        console.log(s1.fullname())
+    </script>
+</body>
+
+</html>
