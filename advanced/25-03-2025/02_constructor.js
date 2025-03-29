@@ -1,3 +1,4 @@
+// let student = class { 
 class student {
     constructor(fname, lname) {
         // create this method for access for variables
