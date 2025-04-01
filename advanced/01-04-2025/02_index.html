@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class employee {
+            details() {
+                console.log("Employee Details")
+            }
+            details(sal) {
+                console.log(`Employee Salary : ${sal}`)
+            }
+        }
+        let e1 = new employee()
+        console.log(e1)
+        e1.details(20000)
+        let data = Object.entries(e1);
+        console.log(data);
+    </script>
+</body>
+
+</html>
