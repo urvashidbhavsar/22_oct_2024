@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <form action="#" class="w-50 mx-auto shadow p-5">
+            <h3>Employee Data</h3>
+            <div class="row g-3">
+                <div class="col-12">
+                    <input type="number" name="" id="id" placeholder="ID" class="form-control">
+                </div>
+                <div class="col-12">
+                    <input type="text" name="" id="ename" placeholder="Enter Full Name" class="form-control">
+                </div>
+                <div class="col-12">
+                    <select name="" id="des" class="form-select">
+                        <option value="">--- select ---</option>
+                        <option value="manager">Manager</option>
+                        <option value="employee">Employee</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <input type="number" name="" id="sal" class="form-control" placeholder="Salary">
+                </div>
+                <div>
+                    <button class="btn btn-primary w-100" onclick="addUserdata()">Add</button>
+                </div>
+            </div>
+        </form>
+
+        <hr>
+        <!-- <button onclick="showData()" class="btn btn-primary">Check Data</button> -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Emp name</th>
+                    <th>Designation</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody id="data"></tbody>
+        </table>
+    </div>
+
+    <script>
+        function addUserdata() {
+            let ID = document.getElementById("id").value.trim()
+            let ename = document.getElementById("ename").value.trim()
+            let sal = document.getElementById("sal").value.trim()
+            let des = document.getElementById("des").value
+            let userdata = { ID, ename, sal, des };
+
+            if (userdata !== "") {
+                let storedata = JSON.parse(localStorage.getItem("empdata")) || []
+                let newdata = [...storedata, userdata]
+                localStorage.setItem("empdata", JSON.stringify(newdata))
+            } else {
+                alert("Please fill this field")
+            }
+            document.getElementById("id").value = ""
+            document.getElementById("ename").value = ""
+            document.getElementById("sal").value = ""
+            document.getElementById("des").value = ""
+            showData();
+        }
+        showData()
+
+        function showData() {
+            let table = document.getElementById("data");
+            table.innerHTML = "";
+            let alldata = JSON.parse(localStorage.getItem("empdata"))
+            // console.log(alldata)
+            alldata.forEach(item => {
+                table.innerHTML += `
+                 <tr>
+                    <td>${item.ID}</td>
+                    <td>${item.ename}</td>
+                    <td>${item.des}</td>
+                    <td>${item.sal}</td>
+                </tr>
+                `
+            })
+        }
+    </script>
+</body>
+
+</html>
