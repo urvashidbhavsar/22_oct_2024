@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.blockDesign {
+    margin: 50px;
+    width: 500px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    transition: 1s ease;
+}
+
+p {
+    min-width: 100%;
+    padding: 20px;
+    cursor: grab;
+}
+
+.title1 {
+    background-color: salmon;
+}
+
+.title2 {
+    background-color: lavender;
+}
+
+.title3 {
+    background-color: #1d1dd9;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+button {
+    height: 30px;
+    width: 30px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
